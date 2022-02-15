@@ -6,6 +6,7 @@ The Solution consists of 1 Console, 2 Class libraries and a test project.
 ![image](https://user-images.githubusercontent.com/8957790/154078089-029c292e-8773-41ed-a6a6-191461b0e5df.png)
 
 **DtnAssesment.Core**
+
 Core layer consists model classes and all interfaces implemented by the repositories and services. 
 There is no business logic exists here. And it does not have any reference to the other projects.
 
@@ -16,21 +17,26 @@ Repositories retrieves lightning and assets from files. Services performing logg
 As output it just writes alert to the console. But it is totally open to the extensions.
 
 **DtnAssesment.Console**
+
 As user interface i just used console application as requested. It does not have any logic just aligns the Dependency Injection configuration.
 
 **DtnAssesment.Tests**
+
 I wrote all unit tests on NUnit framework and for mocking i preferred Moq package. 
 It covers the entire logic in Repository and Service classes.
 
 
 **Running the application**
+
 Just run the DtnAssesment.Console.exe without any parameter. 
 
 **Prerequisites**
+
 Visual Studio 2022
 .NET6.0
 
 **Time complexity during lightning strike**
+
 It retrieves and stores all Assets in a Dictionary by making their quadkey information as key of the dictionary. 
 When it gets lightning information, it calculates the quadkey of lightning and matches the quadkey with the key of Asset dictionary. 
 That's why the time complexity of this process is O(1).
