@@ -29,3 +29,8 @@ Just run the DtnAssesment.Console.exe without any parameter.
 **Prerequisites**
 Visual Studio 2022
 .NET6.0
+
+**Time complexity during lightning strike**
+It retrieves and stores all Assets in a Dictionary by making their quadkey information as key of the dictionary. 
+When it gets lightning information, it calculates the quadkey of lightning and matches the quadkey with the key of Asset dictionary. 
+That's why the time complexity of this process is O(1).
